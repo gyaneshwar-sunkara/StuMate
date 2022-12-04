@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Stumate</string>
+    <string name="stumate_caption">Join Clubs, Find Friends, Learn and Build Together</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="log_in">Log In</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="messages_header">Messages</string>
+
+    <string name="sync_header">Sync</string>
+
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Preference Titles -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+
+    <!-- Messages Preferences -->
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <!-- Sync Preferences -->
+    <string-array name="tags">
+        <item># NREC</item>
+        <item># CSE</item>
+        <item># ANDROID</item>
+        <item># ARTIFICIAL INTELLIGENCE</item>
+    </string-array>
+    <string-array name="group">
+        <item>CSE</item>
+        <item>ECE</item>
+        <item>EEE</item>
+        <item>MECH</item>
+        <item>CIVIL</item>
+    </string-array>
+    <string-array name="year">
+        <item>I (First Year)</item>
+        <item>II (Second Year)</item>
+        <item>III (Third Year)</item>
+        <item>IV (Final Year)</item>
+    </string-array>
+    <string-array name="section">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+    </string-array>
+</resources>

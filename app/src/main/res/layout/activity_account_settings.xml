@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tabLayout.personal.settings.AccountSettings">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_close_black_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/raleway"
+            android:text="Edit Profile"
+            android:textColor="@color/colorAccent"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@+id/close"
+            app:layout_constraintStart_toEndOf="@+id/close"
+            app:layout_constraintTop_toTopOf="@+id/close" />
+
+        <ImageView
+            android:id="@+id/done"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_done_black_24dp"
+            android:tint="@android:color/holo_blue_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/divider4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:alpha=".7"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                android:src="@color/colorAccent" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignTop="@+id/header"
+                android:layout_alignEnd="@+id/header"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="193dp"
+                android:layout_marginTop="34dp"
+                android:layout_marginEnd="189dp"
+                app:srcCompat="@drawable/ic_edit_black_24dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignTop="@id/header"
+                android:layout_alignEnd="@+id/header"
+                android:layout_marginTop="75dp"
+                android:layout_marginEnd="32dp"
+                android:src="@drawable/user"
+                app:background="@color/colorPrimary"
+                app:civ_border_color="#000000"
+                app:civ_border_width="1dp" />
+
+            <LinearLayout
+                android:id="@+id/editPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/circleImageView"
+                android:layout_alignStart="@+id/circleImageView"
+                android:layout_alignEnd="@+id/circleImageView"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/layout_background_profile_settings"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/raleway"
+                    android:padding="2dp"
+                    android:text="Edit Photo"
+                    android:textAlignment="center"
+                    android:textColor="#FF5000" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_toStartOf="@+id/circleImageView"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway_semibold"
+                android:maxLines="1"
+                android:text="Name"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+
+                <EditText
+                    android:id="@+id/enterName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your name"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:maxLength="21"
+                    android:scrollbars="horizontal"
+                    android:fontFamily="@font/raleway"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_below="@+id/textView"
+                    android:layout_alignEnd="@+id/textView"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/collegeId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/enterName"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway_semibold"
+                android:maxLines="1"
+                android:text="Institute"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/collegeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/collegeId"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_toStartOf="@+id/infoButton"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/infoButton"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/collegeValue"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_info_outline_black_24dp" />
+
+            <TextView
+                android:id="@+id/classId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/collegeValue"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway_semibold"
+                android:maxLines="1"
+                android:text="Class"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/classValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/classId"
+                android:layout_alignStart="@+id/classId"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="16dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/infoButton2"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/classValue"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/classValue"
+                android:src="@drawable/ic_info_outline_black_24dp" />
+
+            <TextView
+                android:id="@+id/bio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/classValue"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway_semibold"
+                android:maxLines="1"
+                android:text="Bio"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/enterBio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Add a bio"
+                    android:scrollbars="horizontal"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/raleway"
+                    android:textSize="16sp"
+                    android:layout_below="@+id/bio"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/personalInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/enterBio"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway_semibold"
+                android:maxLines="1"
+                android:text="Personal Details"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/emailId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/personalInfo"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway_semibold"
+                android:maxLines="1"
+                android:text="Email"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/emailValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailId"
+                android:layout_alignStart="@+id/emailId"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="16dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="No registered email"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/emailEdit"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/emailValue"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/emailValue"
+                android:tint="@color/colorAccent"
+                android:src="@drawable/ic_edit_black_24dp" />
+
+            <TextView
+                android:id="@+id/phoneId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailValue"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway_semibold"
+                android:maxLines="1"
+                android:text="Phone"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/phoneValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phoneId"
+                android:layout_alignStart="@+id/phoneId"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="16dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="No registered phone"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/phoneEdit"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/phoneValue"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/phoneValue"
+                android:tint="@color/colorAccent"
+                android:src="@drawable/ic_edit_black_24dp" />
+
+            <TextView
+                android:id="@+id/genderId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phoneValue"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway_semibold"
+                android:maxLines="1"
+                android:text="Gender"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/genderValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/genderId"
+                android:layout_alignStart="@+id/genderId"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="16dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Not Specified"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/genderEdit"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/genderValue"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/genderValue"
+                android:tint="@color/colorAccent"
+                android:src="@drawable/ic_edit_black_24dp" />
+
+            <TextView
+                android:id="@+id/dobId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/genderValue"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway_semibold"
+                android:maxLines="1"
+                android:text="Date of birth"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/dobValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dobId"
+                android:layout_alignStart="@+id/dobId"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="82dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Not Specified"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/dobEdit"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/dobValue"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/dobValue"
+                android:tint="@color/colorAccent"
+                android:src="@drawable/ic_edit_black_24dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
